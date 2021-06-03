@@ -1,0 +1,4 @@
+name: MenuManager
+version: ${project.version}
+main: abhigya.menu.Main
+api-version: 1.16
