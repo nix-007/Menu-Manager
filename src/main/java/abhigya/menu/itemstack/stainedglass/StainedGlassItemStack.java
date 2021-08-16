@@ -2,7 +2,7 @@ package abhigya.menu.itemstack.stainedglass;
 
 import abhigya.menu.itemstack.ItemStackUtils;
 import abhigya.menu.itemstack.custom.CustomItemStack;
-import abhigya.menu.material.XMaterials;
+import abhigya.menu.material.XMaterial;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
 import org.bukkit.Utility;
@@ -129,7 +129,7 @@ public final class StainedGlassItemStack extends CustomItemStack {
         if (COLOR_SET_BY_SHORT) { /* setting color by changing the durability */
             rawSetDurability(color.getShortValue());
         } else { /* setting color by changing the item stack type */
-            super.setType(XMaterials.valueOf((color.name() + "_STAINED_GLASS" + (pane ? "_PANE" : ""))).getMaterial());
+            super.setType(XMaterial.valueOf((color.name() + "_STAINED_GLASS" + (pane ? "_PANE" : ""))).parseMaterial());
         }
     }
 

@@ -1,4 +1,4 @@
-package me.Abhigya.core.util.itemstack.wool;
+package abhigya.menu.itemstack.wool;
 
 /**
  * The wool colors.

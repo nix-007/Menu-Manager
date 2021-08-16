@@ -1,8 +1,8 @@
-package me.Abhigya.core.util.itemstack.wool;
+package abhigya.menu.itemstack.wool;
 
-import me.Abhigya.core.util.itemstack.ItemStackUtils;
-import me.Abhigya.core.util.itemstack.custom.CustomItemStack;
-import me.Abhigya.core.util.reflection.general.EnumReflection;
+import abhigya.menu.ReflectionUtils;
+import abhigya.menu.itemstack.ItemStackUtils;
+import abhigya.menu.itemstack.custom.CustomItemStack;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
 import org.bukkit.Utility;
@@ -99,7 +99,7 @@ public class WoolItemStack extends CustomItemStack {
     public void setColor(WoolColor color) {
         Validate.notNull(color, "Color cannot be null");
 
-        Material wool_material = EnumReflection.getEnumConstant(Material.class, color.name() + "_WOOL");
+        Material wool_material = ReflectionUtils.getEnumConstant(Material.class, color.name() + "_WOOL");
         if (wool_material == null) {
             // we are setting color by changing the durability-
             rawSetDurability(color.getShortValue());
