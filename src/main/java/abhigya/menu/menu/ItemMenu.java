@@ -451,12 +451,9 @@ public class ItemMenu {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
+        if (this == obj){return true;}
+        if (obj == null){return false;}
+        if (getClass() != obj.getClass()){return false;}
         ItemMenu other = (ItemMenu) obj;
         if (!Arrays.equals(contents, other.contents))
             return false;
